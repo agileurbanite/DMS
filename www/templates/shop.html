@@ -1,0 +1,9 @@
+<ion-view view-title="Shop">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="store in shop.stores" href="#/app/stores/{{store.storeId}}">
+        {{store.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion>

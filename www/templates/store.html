@@ -1,0 +1,9 @@
+<ion-view view-title="{{store.title}}">
+  <ion-content>
+    <ion-list>
+      <ion-item data-ng-repeat="product in store.products">
+        {{product.name}} | {{product.salePrice}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
