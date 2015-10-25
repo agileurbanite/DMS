@@ -93,7 +93,7 @@ angular.module('starter')
     }
   })
 })
-.controller('BagCtrl', function($scope, $state, Products, Bags, BagsUpdate, PickupService) {
+.controller('BagCtrl', function($scope, $state, Products, Bags, BagsUpdate) {
   var vm = this;
   angular.extend(vm, {
     title: 'Best Buy',
