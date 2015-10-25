@@ -1,8 +1,16 @@
 <ion-view view-title="{{store.title}}">
+  <ion-nav-buttons side="secondary">
+    <button class="button" ng-click="store.checkout()">
+      <i class="icon ion-ios-cart-outline"></i>
+      Cart<span class="cart-count" data-ng-if="store.productsFire"> | {{store.productsFire.length}}</span>
+    </button>
+  </ion-nav-buttons>
   <ion-content>
     <ion-list>
-      <ion-item data-ng-repeat="product in store.products">
-        {{product.name}} | {{product.salePrice}}
+      <ion-item class="item item-thumbnail-left" data-ng-repeat="product in store.products" type="item-text-wrap" data-ng-click="store.addToCart(product)">
+        <img ng-src="{{product.image}}">
+        <h2>{{product.name}}</h2>
+        <p>{{product.salePrice}}</p>
       </ion-item>
     </ion-list>
   </ion-content>

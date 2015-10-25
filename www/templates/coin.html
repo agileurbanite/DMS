@@ -1,0 +1,12 @@
+<ion-view view-title="Coin">
+  <ion-content>
+    <form name="coinForm" ng-submit="coin.submit()">
+      <formly-form model="coin.model" fields="coin.fields" form="coinForm" options="coin.options">
+        <div class="button-bar">
+          <button type="button" class="button button-stable" data-ng-click="coin.options.resetModel()">Reset</button>
+          <button class="button button-positive" ng-disabled="registerForm.$invalid || registerForm.$pristine" type="submit">Request</button>
+        </div>
+      </formly-form>
+    </form>
+  </ion-content>
+</ion>

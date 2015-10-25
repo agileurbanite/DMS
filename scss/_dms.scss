@@ -1,0 +1,10 @@
+.pane {
+  background: url('../img/dms-bg.png') no-repeat center center fixed;
+  background-size: cover;
+}
+button {
+  &:disabled{
+    background-color: #7BD17B;
+    cursor: default;
+  }
+}

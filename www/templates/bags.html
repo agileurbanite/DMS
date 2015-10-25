@@ -1,8 +1,8 @@
 <ion-view view-title="Bags">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="bag in bags.bags" href="#/app/bags/{{bag.id}}">
-        {{bag.title}}
+      <ion-item ng-repeat="bag in bags.currentBags" data-ng-click="bags.pickup()">
+        {{bag.$id}} | {{bag.status}}
       </ion-item>
     </ion-list>
   </ion-content>

@@ -1,0 +1,29 @@
+<ion-view view-title="Register Card">
+  <ion-content>
+    <h1>{{card.profile.email}}</h1>
+    <form name="cardForm" ng-submit="card.submit()">
+      <formly-form model="card.model" fields="card.fields" form="registerForm" options="card.options">
+        <div class="button-bar">
+          <button type="button" class="button button-stable" data-ng-click="card.options.resetModel()">Reset</button>
+          <button class="button button-positive" ng-disabled="cardForm.$invalid || cardForm.$pristine" type="submit">Add Card</button>
+        </div>
+      </formly-form>
+    </form>
+  </ion-content>
+</ion>
+<script type="text/ng-template" id="datepicker.html">
+  <p class="input-group">
+    <input  type="text"
+            id="{{::id}}"
+            name="{{::id}}"
+            ng-model="model[options.key]"
+            class="form-control"
+            ng-click="datepicker.open($event)"
+            datepicker-popup="{{to.datepickerOptions.format}}"
+            is-open="datepicker.opened"
+            datepicker-options="to.datepickerOptions" />
+    <span class="input-group-btn">
+        <button type="button" class="btn btn-default" ng-click="datepicker.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+    </span>
+  </p>
+</script>

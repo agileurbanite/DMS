@@ -1,0 +1,12 @@
+<ion-view view-title="Register">
+  <ion-content>
+    <form name="registerForm" ng-submit="register.submit()">
+      <formly-form model="register.model" fields="register.fields" form="registerForm" options="register.options">
+        <div class="button-bar">
+          <button type="button" class="button button-stable" data-ng-click="register.options.resetModel()">Reset</button>
+          <button class="button button-positive" ng-disabled="registerForm.$invalid || registerForm.$pristine" type="submit">Register</button>
+        </div>
+      </formly-form>
+    </form>
+  </ion-content>
+</ion>
